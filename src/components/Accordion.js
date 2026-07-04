@@ -14,7 +14,7 @@ function Accordion({ items }) {
       <div key={item.id}>
         <div onClick={() => handleClick(index)}>
           {item.label}
-          {console.log("index: label : ", index, item.label)}
+          {console.log("index : label : ", index, item.label)}
         </div>
         {isExpanded && <div>{item.content}</div>}
       </div>
