@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 function Accordion({ items }) {
   const [expandedIndex, setExpandedIndex] = useState(0);
@@ -12,7 +12,10 @@ function Accordion({ items }) {
 
     return (
       <div key={item.id}>
-        <div onClick={() => handleClick(index)}>{item.label}</div>
+        <div onClick={() => handleClick(index)}>
+          {item.label}
+          {console.log("index: label : ", index, item.label)}
+        </div>
         {isExpanded && <div>{item.content}</div>}
       </div>
     );
